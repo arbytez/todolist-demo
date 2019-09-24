@@ -13,11 +13,12 @@ The main categories managed and technologies used:
 * graphql queries/mutations/subscriptions
 * real time updates through graphql subscriptions
 
-<br/>
+## Demo
 
-**todo-list-demo** [**todo-list-demo**](#)
+- **frontend** [**https://todo-list-demo.surge.sh**](https://todo-list-demo.surge.sh)
+- **backend** [**https://todolist-demo-backend.herokuapp.com/graphql**](https://todolist-demo-backend.herokuapp.com/graphql)
 
-<br/>
+##
 
 - **[Backend](/backend)**: nodejs express apollo graphql server that wraps the prisma.io crud api backend. Manage the authentication and authorization of users and the creation of the todo list.
 - **[Frontend](/frontend)**: sapper/svelte app built with tailwind css. Only authenticated users can receive real time changes from another users through graphql subscriptions.
