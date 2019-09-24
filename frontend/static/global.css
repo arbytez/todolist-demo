@@ -1,0 +1,18 @@
+:root {
+    --mirage: #1C2532;
+    --regent: #A9C7DF;
+    --athensgray: #FAFBFC;
+    --oxfordblue: '#323E4F';
+    --nepal: '#8EACC5';
+    --ebonyclay: '#232D3D';
+    --azureradiance: '#0194EF';
+    --ebonyclay2: '#283243';
+    --dodgerblue: '#2EA2F9';
+    --cinnabar: '#E54124';
+}
+
+html,
+body {
+    font-family: 'Heebo','Courier New', Courier, monospace;
+    background-color: var(--mirage);
+}

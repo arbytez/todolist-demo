@@ -1,0 +1,35 @@
+enum Role {
+  ADMIN
+  USER
+  GUEST
+  ROLEUPDATE
+}
+
+type User {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  username: String! @unique
+  password: String!
+  roles: [Role]! @default(value: GUEST) @scalarList(strategy: RELATION)
+  tokens: [Token] @relation(link: TABLE)
+  todos: [Todo] @relation(link: TABLE)
+}
+
+type Todo {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  content: String!
+  done: Boolean!
+  user: User!
+}
+
+type Token {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  content: String! @unique
+  expiration: DateTime!
+  user: User!
+}

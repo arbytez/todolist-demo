@@ -1,0 +1,60 @@
+# import * from './generated/prisma.graphql'
+
+type Query {
+  me: UserWithToken
+  users(
+    where: UserWhereInput
+    orderBy: UserOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [User]!
+  todoes(
+    where: TodoWhereInput
+    orderBy: TodoOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [Todo]!
+  todoesConnection(
+    where: TodoWhereInput
+    orderBy: TodoOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): TodoConnection!
+}
+
+type Mutation {
+  signIn(username: String!, password: String!): UserWithToken
+  signOut: Boolean!
+  signUp(username: String!, password: String!): UserWithToken
+  createTodo(data: TodoCreateInput!): Todo!
+  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
+  updateTodo(data: TodoUpdateInput!, where: TodoWhereUniqueInput!): Todo
+  deleteUser(where: UserWhereUniqueInput!): User
+  deleteTodo(where: TodoWhereUniqueInput!): Todo
+}
+
+type Subscription {
+  user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
+  todo(where: TodoSubscriptionWhereInput): TodoSubscriptionPayload
+}
+
+type User {
+  id: ID!
+  username: String!
+  roles: [Role]!
+  todos: [Todo]
+}
+
+type UserWithToken {
+  user: User
+  token: String
+}
