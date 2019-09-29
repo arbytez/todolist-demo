@@ -16,7 +16,7 @@ The main categories managed and technologies used:
 ## Demo
 
 - **frontend** [**https://todo-list-demo.surge.sh**](https://todo-list-demo.surge.sh)
-- **backend** [**https://todolist-demo-backend.herokuapp.com/graphql**](https://todolist-demo-backend.herokuapp.com/graphql)
+- **backend** [**https://todo-list-demo-backend.epbe.dynu.net/graphql**](https://todo-list-demo-backend.epbe.dynu.net/graphql)
 
 ##
 
